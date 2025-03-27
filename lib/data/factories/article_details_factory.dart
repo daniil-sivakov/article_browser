@@ -1,5 +1,5 @@
-import 'package:article_browser/data/transformers/article_mapper.dart';
-import 'package:article_browser/data/transformers/comment_mapper.dart';
+import 'package:article_browser/data/mappers/article_mapper.dart';
+import 'package:article_browser/data/mappers/comment_mapper.dart';
 import 'package:article_browser/data/models/article_data/article_data.dart';
 import 'package:article_browser/data/models/comment_data/comment_data.dart';
 import 'package:article_browser/domain/models/article_details/article_details.dart';

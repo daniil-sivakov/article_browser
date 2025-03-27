@@ -1,8 +1,8 @@
 import 'package:article_browser/data/api/api_client.dart';
 import 'package:article_browser/data/constants/local_storage_keys.dart';
-import 'package:article_browser/data/transformers/article_previews_codec.dart';
-import 'package:article_browser/data/transformers/article_previews_factory.dart';
-import 'package:article_browser/data/transformers/domain_exception_factory.dart';
+import 'package:article_browser/data/codecs/article_previews_codec.dart';
+import 'package:article_browser/data/factories/article_previews_factory.dart';
+import 'package:article_browser/data/factories/domain_exception_factory.dart';
 import 'package:article_browser/data/models/article_data/article_data.dart';
 import 'package:article_browser/data/providers/local_storage_provider.dart';
 import 'package:article_browser/domain/models/article_previews/article_previews.dart';
@@ -41,7 +41,7 @@ class ArticlePreviewsRepositoryImpl implements ArticlePreviewsRepository {
     if (previewsJsonString == null) return null;
 
     try {
-      return _articlePreviewsCodec.decodeDetailsFromJson(previewsJsonString);
+      return _articlePreviewsCodec.decodePreviewsFromJson(previewsJsonString);
     } on Object {
       _localStorageProvider.remove(storageKey);
       rethrow;

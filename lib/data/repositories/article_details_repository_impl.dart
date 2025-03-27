@@ -1,8 +1,8 @@
 import 'package:article_browser/data/api/api_client.dart';
 import 'package:article_browser/data/constants/local_storage_keys.dart';
-import 'package:article_browser/data/transformers/article_details_factory.dart';
-import 'package:article_browser/data/transformers/article_details_codec.dart';
-import 'package:article_browser/data/transformers/domain_exception_factory.dart';
+import 'package:article_browser/data/factories/article_details_factory.dart';
+import 'package:article_browser/data/codecs/article_details_codec.dart';
+import 'package:article_browser/data/factories/domain_exception_factory.dart';
 import 'package:article_browser/data/providers/local_storage_provider.dart';
 import 'package:article_browser/domain/models/article_details/article_details.dart';
 import 'package:article_browser/domain/repositories/article_details_repository.dart';

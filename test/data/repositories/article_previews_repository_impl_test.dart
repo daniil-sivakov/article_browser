@@ -1,9 +1,9 @@
 import 'package:article_browser/data/api/api_client.dart';
 import 'package:article_browser/data/repositories/article_previews_repository_impl.dart';
-import 'package:article_browser/data/transformers/article_previews_factory.dart';
+import 'package:article_browser/data/factories/article_previews_factory.dart';
 import 'package:article_browser/data/models/article_data/article_data.dart';
 import 'package:article_browser/data/providers/local_storage_provider.dart';
-import 'package:article_browser/data/transformers/article_previews_codec.dart';
+import 'package:article_browser/data/codecs/article_previews_codec.dart';
 import 'package:article_browser/domain/exceptions/exceptions.dart';
 import 'package:article_browser/domain/models/article_previews/article_previews.dart';
 import 'package:dio/dio.dart';
@@ -66,14 +66,14 @@ void main() {
     ).thenAnswer((_) async => expectedPreviewsJsonString);
 
     when(
-      codec.decodeDetailsFromJson(expectedPreviewsJsonString),
+      codec.decodePreviewsFromJson(expectedPreviewsJsonString),
     ).thenReturn(expectedPreviews);
 
     final result = await repository.loadCachedPreviews();
 
     expect(result, expectedPreviews);
     verify(localStorageProvider.get(any)).called(1);
-    verify(codec.decodeDetailsFromJson(expectedPreviewsJsonString)).called(1);
+    verify(codec.decodePreviewsFromJson(expectedPreviewsJsonString)).called(1);
   });
 
   test('Should return null if no cached previews are found', () async {
@@ -82,7 +82,7 @@ void main() {
     final result = await repository.loadCachedPreviews();
 
     expect(result, isNull);
-    verifyNever(codec.decodeDetailsFromJson(any));
+    verifyNever(codec.decodePreviewsFromJson(any));
     verify(localStorageProvider.get(any)).called(1);
   });
 
@@ -130,7 +130,7 @@ void main() {
     ).thenAnswer((_) async => cachedJsonString);
     when(localStorageProvider.remove(any)).thenAnswer((_) async {});
     when(
-      codec.decodeDetailsFromJson(any),
+      codec.decodePreviewsFromJson(any),
     ).thenThrow(StateError('Unknown cache error'));
 
     Object? actualError;

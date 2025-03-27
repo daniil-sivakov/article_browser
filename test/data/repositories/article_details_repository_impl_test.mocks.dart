@@ -12,9 +12,8 @@ import 'package:article_browser/data/models/comment_data/comment_data.dart'
     as _i4;
 import 'package:article_browser/data/providers/local_storage_provider.dart'
     as _i9;
-import 'package:article_browser/data/transformers/article_details_codec.dart'
-    as _i10;
-import 'package:article_browser/data/transformers/article_details_factory.dart'
+import 'package:article_browser/data/codecs/article_details_codec.dart' as _i10;
+import 'package:article_browser/data/factories/article_details_factory.dart'
     as _i12;
 import 'package:article_browser/domain/models/article/article.dart' as _i6;
 import 'package:article_browser/domain/models/article_details/article_details.dart'

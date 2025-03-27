@@ -5,7 +5,7 @@ import 'package:article_browser/domain/models/article_previews/article_previews.
 class ArticlePreviewsCodec {
   const ArticlePreviewsCodec();
 
-  ArticlePreviews decodeDetailsFromJson(String previewsJsonString) {
+  ArticlePreviews decodePreviewsFromJson(String previewsJsonString) {
     return ArticlePreviews.fromJson(jsonDecode(previewsJsonString));
   }
 

@@ -12,9 +12,8 @@ import 'package:article_browser/data/models/comment_data/comment_data.dart'
     as _i7;
 import 'package:article_browser/data/providers/local_storage_provider.dart'
     as _i8;
-import 'package:article_browser/data/transformers/article_previews_codec.dart'
-    as _i9;
-import 'package:article_browser/data/transformers/article_previews_factory.dart'
+import 'package:article_browser/data/codecs/article_previews_codec.dart' as _i9;
+import 'package:article_browser/data/factories/article_previews_factory.dart'
     as _i11;
 import 'package:article_browser/domain/models/article/article.dart' as _i12;
 import 'package:article_browser/domain/models/article_previews/article_previews.dart'
@@ -165,7 +164,7 @@ class MockLocalStorageProvider extends _i1.Mock
 class MockArticlePreviewsCodec extends _i1.Mock
     implements _i9.ArticlePreviewsCodec {
   @override
-  _i3.ArticlePreviews decodeDetailsFromJson(String? previewsJsonString) =>
+  _i3.ArticlePreviews decodePreviewsFromJson(String? previewsJsonString) =>
       (super.noSuchMethod(
             Invocation.method(#decodeDetailsFromJson, [previewsJsonString]),
             returnValue: _FakeArticlePreviews_1(
