@@ -1,4 +1,4 @@
-import 'package:article_browser/domain/models/article.dart';
+import 'package:article_browser/domain/models/article/article.dart';
 import 'package:article_browser/domain/models/reception_details/reception_details.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
