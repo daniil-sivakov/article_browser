@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:article_browser/core/services/network_connection_service.dart';
 import 'package:article_browser/domain/exceptions/exceptions.dart';
-import 'package:article_browser/domain/models/article_details.dart';
+import 'package:article_browser/domain/models/article_details/article_details.dart';
 import 'package:article_browser/domain/repositories/article_details_repository.dart';
 
 class LoadArticleDetails {
