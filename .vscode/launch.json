@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "article_browser (Debug)",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "article_browser (Profile)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "article_browser (Release)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "article_browser: Run Integration Tests",
+            "request": "launch",
+            "type": "dart",
+            "program": "integration_test/app_test.dart"
+        }
+    ]
+}
