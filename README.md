@@ -16,6 +16,8 @@ flutter pub get
 flutter run
 ```
 
+Присутствуют VSCode конфигурации для запуска в режимах unit_test/integration_test.
+
 <!-- ![Theme switching](assets/theme_switching.gif) ![Just scrolling](assets/just_scrolling.gif) ![Caching](assets/caching_showcase.gif) ![Details](assets/details_screen.gif)  -->
 <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
   <div style="text-align: center;">
