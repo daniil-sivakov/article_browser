@@ -29,6 +29,7 @@ class ArticleDetailsScreen extends StatelessWidget {
           ..add(ArticleDetailsEvent.dataUpdateRequested());
       },
       child: Scaffold(
+        key: Key('details_scaffold'),
         appBar: AppBar(
           backgroundColor: ColorScheme.of(context).primary,
           foregroundColor: ColorScheme.of(context).onPrimary,
