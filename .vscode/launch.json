@@ -1,7 +1,6 @@
 {
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "article_browser (Debug)",
             "request": "launch",
@@ -18,6 +17,12 @@
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
+        },
+        {
+            "name": "article_browser: Run Unit Tests",
+            "type": "dart",
+            "request": "launch",
+            "program": "./test/"
         },
         {
             "name": "article_browser: Run Integration Tests",
