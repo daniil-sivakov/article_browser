@@ -36,4 +36,8 @@ flutter run
     <p>Страница деталей статьи</p>
     <img src="assets/details_screen.gif" alt="GIF 4" style="width: 300px; height: auto;" />
   </div>
+  <div style="text-align: center;">
+    <p>Запуск e2e-тестов</p>
+    <img src="assets/integration_tests.gif" alt="GIF 4" style="width: 300px; height: auto;" />
+  </div>
 </div>
