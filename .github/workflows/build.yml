@@ -1,0 +1,12 @@
+name: Flutter
+
+on:
+  push:
+    branches: ["ci_test_branch"]
+
+jobs:
+  flutter_job:
+    runs_on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
