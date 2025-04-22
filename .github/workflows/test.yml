@@ -25,7 +25,7 @@ jobs:
         uses: malinskiy/action-android/emulator-run-cmd@release/0.1.6
         with:
           cmd: flutter test integration_test/app_test.dart
-          api: 31
+          api: 25
           cmdOptions: -no-snapshot-save -noaudio -no-boot-anim -cores 2 -memory 3072 -no-window
           tag: google_apis
           abi: x86_64
