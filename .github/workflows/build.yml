@@ -24,7 +24,7 @@ jobs:
       - name: Build apk
         run: flutter build apk
       - name: Upload artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           name: APK1
           path: build/app/outputs/flutter-apk/app-release.apk
