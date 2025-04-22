@@ -1,4 +1,4 @@
-name: Flutter
+name: Analyze and test
 
 on:
   push:
@@ -22,17 +22,10 @@ jobs:
       - name: Run analyze script
         run: sh ./scripts/flutter_analyze.sh
       - name: Run integration tests
-        uses: malinskiy/action-android/emulator-run-cmd@release/0.1.2
+        uses: malinskiy/action-android/emulator-run-cmd@release/0.1.6
         with:
           cmd: flutter test integration_test/app_test.dart
           api: 31
           cmdOptions: -no-snapshot-save -noaudio -no-boot-anim -cores 2 -memory 3072 -no-window
           tag: google_apis
           abi: x86_64
-      - name: Build apk
-        run: flutter build apk
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: APK1
-          path: build/app/outputs/flutter-apk/app-release.apk
