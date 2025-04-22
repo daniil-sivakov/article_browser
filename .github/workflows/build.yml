@@ -17,9 +17,14 @@ jobs:
           channel: "stable"
       - name: Install dependencies
         run: flutter pub get
-      - name: Verify formatting
-        run: dart format --output=none
       - name: Run unit tests
         run: flutter test
+      - name: Run analyze script
+        run: sh ./scripts/flutter_analyze.sh
       - name: Build apk
         run: flutter build apk
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: APK1
+          path: build/app/outputs/flutter-apk/app-release.apk
