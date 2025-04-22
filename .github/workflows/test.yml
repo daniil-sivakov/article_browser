@@ -29,3 +29,4 @@ jobs:
           cmdOptions: -no-snapshot-save -noaudio -no-boot-anim -cores 2 -memory 3072 -no-window
           tag: google_apis
           abi: x86_64
+          verbose: true
